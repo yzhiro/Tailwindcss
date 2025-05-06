@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,18 +14,27 @@
       font-weight: bold;
       border-bottom: 2px solid #f87171;
     }
-    html, body {
+
+    html,
+    body {
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
   </style>
 </head>
+
 <body class="bg-gray-100 text-black font-sans sm:text-2xl md:text-2xl text-2xl">
 
-  <!-- 固定ヘッダー -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md px-8 py-6 flex justify-between items-center text-1xl sm:text-1xl md:text-1xl">
-    <a href="#top" class="text-2xl space-x-4 md:text-4xl font-bold">Eredix</a>
-    <nav id="navbar" class="flex space-x-4 text-1xl sm:text-3xl md:text-2xl">
+  <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md px-8 py-6 flex justify-between items-center">
+    <a href="#top" class="text-2xl md:text-4xl font-bold">Eredix</a>
+
+    <!-- ハンバーガーアイコン -->
+    <button id="menu-btn" class="block md:hidden text-3xl focus:outline-none">
+      ☰
+    </button>
+
+    <!-- ナビゲーション -->
+    <nav id="navbar" class="hidden md:flex flex-col md:flex-row space-y-12 md:space-y-0 md:space-x-4 text-xl md:text-2xl absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent px-8 py-6 md:p-0 shadow md:shadow-none z-40 space-x-4">
       <a href="#top" class="hover:underline">TOP</a>
       <a href="#works" class="hover:underline">Works</a>
       <a href="#about" class="hover:underline">About</a>
@@ -35,13 +45,16 @@
     </nav>
   </header>
 
+
   <!-- メイン -->
   <main id="fullpage">
 
     <!-- TOP -->
-    <section id="top" class="pt-28 w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6" style="background-image: url(./img/a.png);" data-aos="fade-up">
-      <h1 class="text-1xl sm:text-5xl md:text-5xl font-bold">Welcome</h1>
-      <p class="md:text-3xl sm:text-4xl">Explore the beauty</p>
+    <section id="top"
+      class="pt-28 w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6"
+      style="background-image: url(./img/a.png);" data-aos="fade-up">
+      <h1 class="text-5xl md:text-5xl font-bold">Welcome</h1>
+      <p class="md:text-3xl text-3xl">Explore the beauty</p>
     </section>
     <section data-section="top" class="bg-white text-black px-8 py-12 text-xl" data-aos="fade-left">
       <div class="max-w-2xl mx-auto md:text-2xl sm:text-2xl">
@@ -50,9 +63,11 @@
     </section>
 
     <!-- Works -->
-    <section id="works" class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6" style="background-image: url(./img/b.png);" data-aos="fade-right">
-      <h2 class="text-3xl sm:text-5xl md:text-5xl font-bold">Works</h2>
-      <p class="md:text-3xl sm:text-4xl">Our Creative Projects</p>
+    <section id="works"
+      class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6"
+      style="background-image: url(./img/b.png);" data-aos="fade-right">
+      <h2 class="text-5xl md:text-5xl font-bold">Works</h2>
+      <p class="md:text-3xl text-3xl">Our Creative Projects</p>
     </section>
     <section data-section="works" class="bg-white text-black px-8 py-12 text-xl" data-aos="fade-up">
       <div class="max-w-2xl mx-auto md:text-2xl sm:text-2xl">
@@ -61,9 +76,11 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6" style="background-image: url(./img/c.png);" data-aos="fade-left">
-      <h2 class="text-3xl sm:text-5xl md:text-5xl font-bold">About Us</h2>
-      <p class="md:text-3xl sm:text-4xl">Who we are</p>
+    <section id="about"
+      class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6"
+      style="background-image: url(./img/c.png);" data-aos="fade-left">
+      <h2 class="text-5xl  md:text-5xl font-bold">About Us</h2>
+      <p class="md:text-3xl text-3xl">Who we are</p>
     </section>
     <section data-section="about" class="bg-white text-black px-8 py-12 text-xl" data-aos="fade-right">
       <div class="max-w-2xl mx-auto md:text-2xl sm:text-2xl">
@@ -72,9 +89,11 @@
     </section>
 
     <!-- Services -->
-    <section id="services" class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6" style="background-image: url(./img/d.png);" data-aos="zoom-in">
-      <h2 class="text-3xl sm:text-5xl md:text-5xl font-bold">Services</h2>
-      <p class="md:text-3xl sm:text-4xl">What we do</p>
+    <section id="services"
+      class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6"
+      style="background-image: url(./img/d.png);" data-aos="zoom-in">
+      <h2 class="text-5xl md:text-5xl font-bold">Services</h2>
+      <p class="md:text-3xl text-3xl">What we do</p>
     </section>
     <section data-section="services" class="bg-white text-black px-8 py-12 text-xl" data-aos="fade-up-left">
       <div class="max-w-2xl mx-auto md:text-2xl sm:text-2xl">
@@ -83,9 +102,11 @@
     </section>
 
     <!-- Portfolio -->
-    <section id="portfolio" class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6" style="background-image: url(./img/e.png);" data-aos="fade-down">
-      <h2 class="text-3xl sm:text-5xl md:text-5xl font-bold">Portfolio</h2>
-      <p class="md:text-3xl sm:text-4xl">Our best works</p>
+    <section id="portfolio"
+      class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6"
+      style="background-image: url(./img/e.png);" data-aos="fade-down">
+      <h2 class="text-5xl md:text-5xl font-bold">Portfolio</h2>
+      <p class="md:text-3xl text-3xl">Our best works</p>
     </section>
     <section data-section="portfolio" class="bg-white text-black px-8 py-12 text-xl" data-aos="fade-up-right">
       <div class="max-w-2xl mx-auto md:text-2xl sm:text-2xl">
@@ -94,9 +115,11 @@
     </section>
 
     <!-- Team -->
-    <section id="team" class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6" style="background-image: url(./img/f.png);" data-aos="fade-up-right">
-      <h2 class="text-3xl sm:text-5xl md:text-5xl font-bold">Team</h2>
-      <p class="md:text-3xl sm:text-4xl">Meet our team</p>
+    <section id="team"
+      class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6"
+      style="background-image: url(./img/f.png);" data-aos="fade-up-right">
+      <h2 class="text-5xl md:text-5xl font-bold">Team</h2>
+      <p class="md:text-3xl text-3xl">Meet our team</p>
     </section>
     <section data-section="team" class="bg-white text-black px-8 py-12 text-xl" data-aos="fade-down">
       <div class="max-w-2xl mx-auto md:text-2xl sm:text-2xl">
@@ -105,9 +128,11 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6" style="background-image: url(./img/g.png);" data-aos="fade-up-left">
-      <h2 class="text-3xl sm:text-5xl md:text-5xl font-bold">Contact</h2>
-      <p class="md:text-3xl sm:text-4xl">Get in touch</p>
+    <section id="contact"
+      class="w-full h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-white space-y-6"
+      style="background-image: url(./img/g.png);" data-aos="fade-up-left">
+      <h2 class="text-5xl md:text-5xl font-bold">Contact</h2>
+      <p class="md:text-3xl text-3xl">Get in touch</p>
     </section>
     <section data-section="contact" class="bg-white text-black px-8 py-12 text-xl" data-aos="fade-up">
       <div class="max-w-2xl mx-auto md:text-2xl sm:text-2xl">
@@ -115,71 +140,89 @@
       </div>
     </section>
 
- <!--2カラムのお問い合わせフォーム-->
- <section id="contact" class="bg-gradient-to-br from-blue-100 to-blue-500 px-4 py-20">
-  <div class="max-w-5xl mx-auto bg-white p-10 rounded-2xl shadow-xl" data-aos="fade-up">
-    <h3 class="text-3xl font-bold text-center mb-10 text-blue-600">お問い合わせ</h3>
-    <form action="#" method="POST">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- 左カラム -->
-        <div class="space-y-6">
-          <div class="relative">
-            <input type="text" id="name" name="name" required class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none" placeholder="お名前">
-            <label for="name" class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">お名前</label>
-          </div>
-          <div class="relative">
-            <input type="text" id="company" name="company" class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none" placeholder="会社名（任意）">
-            <label for="company" class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">会社名（任意）</label>
-          </div>
-          <div class="relative">
-            <input type="email" id="email" name="email" required class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none" placeholder="メールアドレス">
-            <label for="email" class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">メールアドレス</label>
-          </div>
-          <div class="relative">
-            <input type="tel" id="phone" name="phone" class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none" placeholder="電話番号">
-            <label for="phone" class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">電話番号（任意）</label>
-          </div>
-        </div>
+    <!--2カラムのお問い合わせフォーム-->
+    <section id="contact" class="bg-gradient-to-br from-blue-100 to-blue-500 px-4 py-20">
+      <div class="max-w-5xl mx-auto bg-white p-10 rounded-2xl shadow-xl" data-aos="fade-up">
+        <h3 class="text-3xl font-bold text-center mb-10 text-blue-600">お問い合わせ</h3>
+        <form action="#" method="POST">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- 左カラム -->
+            <div class="space-y-6">
+              <div class="relative">
+                <input type="text" id="name" name="name" required
+                  class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none"
+                  placeholder="お名前">
+                <label for="name"
+                  class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">お名前</label>
+              </div>
+              <div class="relative">
+                <input type="text" id="company" name="company"
+                  class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none"
+                  placeholder="会社名（任意）">
+                <label for="company"
+                  class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">会社名（任意）</label>
+              </div>
+              <div class="relative">
+                <input type="email" id="email" name="email" required
+                  class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none"
+                  placeholder="メールアドレス">
+                <label for="email"
+                  class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">メールアドレス</label>
+              </div>
+              <div class="relative">
+                <input type="tel" id="phone" name="phone"
+                  class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none"
+                  placeholder="電話番号">
+                <label for="phone"
+                  class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">電話番号（任意）</label>
+              </div>
+            </div>
 
-        <!-- 右カラム -->
-        <div class="space-y-6">
-          <div>
-            <label for="type" class="block mb-1 font-semibold text-gray-700">お問い合わせの種類</label>
-            <select id="type" name="type" required class="w-full border border-gray-300 rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="">選択してください</option>
-              <option value="service">サービスについて</option>
-              <option value="support">技術サポート</option>
-              <option value="feedback">ご意見・ご要望</option>
-              <option value="other">その他</option>
-            </select>
+            <!-- 右カラム -->
+            <div class="space-y-6">
+              <div>
+                <label for="type" class="block mb-1 font-semibold text-gray-700">お問い合わせの種類</label>
+                <select id="type" name="type" required
+                  class="w-full border border-gray-300 rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="">選択してください</option>
+                  <option value="service">サービスについて</option>
+                  <option value="support">技術サポート</option>
+                  <option value="feedback">ご意見・ご要望</option>
+                  <option value="other">その他</option>
+                </select>
+              </div>
+              <div>
+                <label for="time" class="block mb-1 font-semibold text-gray-700">連絡希望時間帯</label>
+                <select id="time" name="time"
+                  class="w-full border border-gray-300 rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="">指定なし</option>
+                  <option value="morning">午前中（9時〜12時）</option>
+                  <option value="afternoon">午後（13時〜17時）</option>
+                  <option value="evening">夕方以降（17時以降）</option>
+                </select>
+              </div>
+              <div class="relative">
+                <textarea id="message" name="message" rows="5" required
+                  class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none"
+                  placeholder="お問い合わせ内容"></textarea>
+                <label for="message"
+                  class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">お問い合わせ内容</label>
+              </div>
+              <div class="flex items-start gap-2 pt-2">
+                <input type="checkbox" id="agree" name="agree" required class="mt-1">
+                <label for="agree" class="text-sm text-gray-700">プライバシーポリシーに同意します</label>
+              </div>
+            </div>
           </div>
-          <div>
-            <label for="time" class="block mb-1 font-semibold text-gray-700">連絡希望時間帯</label>
-            <select id="time" name="time" class="w-full border border-gray-300 rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <option value="">指定なし</option>
-              <option value="morning">午前中（9時〜12時）</option>
-              <option value="afternoon">午後（13時〜17時）</option>
-              <option value="evening">夕方以降（17時以降）</option>
-            </select>
+          <div class="text-center pt-10">
+            <button type="submit"
+              class="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-md">
+              ✉️ 送信する
+            </button>
           </div>
-          <div class="relative">
-            <textarea id="message" name="message" rows="5" required class="peer w-full border-b-2 border-gray-300 bg-transparent py-2 text-lg placeholder-transparent focus:border-blue-500 focus:outline-none" placeholder="お問い合わせ内容"></textarea>
-            <label for="message" class="absolute left-0 -top-5 text-gray-600 text-sm peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 transition-all">お問い合わせ内容</label>
-          </div>
-          <div class="flex items-start gap-2 pt-2">
-            <input type="checkbox" id="agree" name="agree" required class="mt-1">
-            <label for="agree" class="text-sm text-gray-700">プライバシーポリシーに同意します</label>
-          </div>
-        </div>
+        </form>
       </div>
-      <div class="text-center pt-10">
-        <button type="submit" class="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 shadow-md">
-          ✉️ 送信する
-        </button>
-      </div>
-    </form>
-  </div>
-</section>
+    </section>
   </main>
 
   <!-- フッター -->
@@ -194,6 +237,11 @@
       once: true,
       duration: 2500,
       easing: 'ease-out'
+    });
+
+    document.getElementById("menu-btn").addEventListener("click", function () {
+      const nav = document.getElementById("navbar");
+      nav.classList.toggle("hidden");
     });
 
     const navLinks = document.querySelectorAll("#navbar a");
@@ -229,4 +277,5 @@
     });
   </script>
 </body>
+
 </html>
